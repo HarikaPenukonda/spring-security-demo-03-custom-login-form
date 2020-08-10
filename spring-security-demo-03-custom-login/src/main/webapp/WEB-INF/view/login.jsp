@@ -14,6 +14,11 @@
 	<form:form action="${pageContext.request.contextPath}/authenticateTheUser"
 			   method="POST">
 			   
+			   <!-- check for login error -->
+			   <c:if test="${param.error != null}">
+			   	<i>Sorry! you have entered invalid username/password</i>
+			   </c:if>
+			   
 			   <p>
 			   User name : <input type="text" name="username"/>
 			   </p>
